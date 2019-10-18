@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import Dashboard from './containers/dashboard';
+import Dashboard from './containers/Dashboard/dashboard';
 
 ReactDOM.render(
   <Dashboard />,

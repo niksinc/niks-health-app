@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CheckboxWithLabel changes the text after click 1`] = `
+<div>
+  <h3>
+    Dashboard
+  </h3>
+  <input
+    id="weight"
+    name="weight"
+    value=""
+  />
+  <table>
+    <thead>
+      <th>
+        Date
+      </th>
+      <th>
+        Weight
+      </th>
+      <th>
+        Gain/Loss
+      </th>
+    </thead>
+    <tbody>
+      <tr
+        key="today"
+      >
+        <td>
+          today
+        </td>
+        <td>
+          188
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;

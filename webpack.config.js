@@ -6,6 +6,12 @@ module.exports = {
   entry: "./src/index.tsx",
   mode: "development",
   devtool: "inline-source-map",
+  devServer: {
+    host: "niks-health-app.com",
+    contentBase: path.join(__dirname, "dist"),
+    compress: true,
+    port: 9000
+  },
   module: {
     rules: [
       {
@@ -40,11 +46,5 @@ module.exports = {
       template: "./public/index.html"
     }),
     new DashboardPlugin()
-  ],
-  devServer: {
-    host: "niks-health-app.com",
-    contentBase: path.join(__dirname, "dist"),
-    compress: true,
-    port: 9000
-  }
+  ]
 };
