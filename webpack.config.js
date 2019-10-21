@@ -3,48 +3,59 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const DashboardPlugin = require("webpack-dashboard/plugin");
 
 module.exports = {
-  entry: "./src/index.tsx",
-  mode: "development",
-  devtool: "inline-source-map",
+  entry: './src/index.tsx',
+  mode: 'development',
+  devtool: 'inline-source-map',
   devServer: {
-    host: "niks-health-app.com",
-    contentBase: path.join(__dirname, "dist"),
+    host: 'niks-health-app.com',
+    contentBase: path.join(__dirname, 'dist'),
     compress: true,
-    port: 9000
+    port: 9000,
   },
   module: {
     rules: [
       {
         test: /\.tsx?$/,
-        enforce: "pre",
+        enforce: 'pre',
         use: [
           {
-            loader: "awesome-typescript-loader"
+            loader: 'awesome-typescript-loader',
           },
           {
-            loader: "tslint-loader",
+            loader: 'tslint-loader',
             options: {
-              tsConfigFile: "tsconfig.json",
+              tsConfigFile: 'tsconfig.json',
               emitErrors: true,
-            }
-          }
+            },
+          },
         ],
-        exclude: /node_modules/
-      }
-    ]
+        exclude: /node_modules/,
+      },
+      {
+        test: /\.s[ac]ss$/i,
+        use: [
+          // Creates `style` nodes from JS strings
+          'style-loader',
+          // Translates CSS into CommonJS
+          'css-loader',
+          // Compiles Sass to CSS
+          'sass-loader',
+        ],
+      },
+    ],
   },
   resolve: {
-    extensions: [".tsx", ".ts", ".js"]
+    extensions: ['.tsx', '.ts', '.js'],
   },
   output: {
-    filename: "bundle.js",
-    path: path.resolve(__dirname, "dist")
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'dist'),
   },
   plugins: [
     new HtmlWebpackPlugin({
       inject: true,
-      template: "./public/index.html"
+      template: './public/index.html',
     }),
-    new DashboardPlugin()
-  ]
+    new DashboardPlugin(),
+  ],
 };

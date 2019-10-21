@@ -1,6 +1,6 @@
 import { shallow } from 'enzyme';
 import * as React from 'react';
-import CheckboxWithLabel from './dashboard';
+import CheckboxWithLabel from './Dashboard';
 // TODO: add more tests
 test('CheckboxWithLabel changes the text after click', () => {
   const checkbox = shallow(<CheckboxWithLabel />);
