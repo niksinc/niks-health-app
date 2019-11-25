@@ -2,7 +2,7 @@ import axios from 'axios';
 
 
 export const getAllData: any = async () => {
-  const response = await axios.get('http://localhost:3400/mydata');
+  const response = await axios.get('http://localhost:3220/dashboard');
   // if (response.error) {
   //   console.error('error occured!!!');
   //   return [];

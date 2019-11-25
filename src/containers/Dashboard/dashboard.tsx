@@ -20,12 +20,14 @@ class Dashboard extends React.Component<any, any> {
     console.log('this is data', data);
     this.setState({ data });
   }
+
   public render() {
     if (this.state.data.length === 0) {
+      // TODO: change this condition to add the meaningful message
       return null;
     } else {
       // tslint:disable-next-line: no-console
-      console.log('this is data from api', this.state.data[0]);
+      console.log('This is the new API', this.state.data[0]);
       const remaining = '';
       // const remaining = this.state.data[0].weight - 180;
       return (
