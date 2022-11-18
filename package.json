@@ -30,7 +30,7 @@
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.15.1",
     "enzyme-to-json": "^3.4.2",
-    "html-webpack-plugin": "3.0.7",
+    "html-webpack-plugin": "5.5.0",
     "jest": "^24.9.0",
     "node-sass": "^4.12.0",
     "sass-loader": "^8.0.0",
@@ -42,7 +42,7 @@
     "tslint-loader": "^3.5.4",
     "typescript": "^3.6.4",
     "webpack": "^4.41.2",
-    "webpack-cli": "^3.3.9",
+    "webpack-cli": "^3.3.12",
     "webpack-dashboard": "^3.2.0",
     "webpack-dev-server": "^3.8.2"
   },
